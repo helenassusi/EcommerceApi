@@ -3,6 +3,9 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews();
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -13,6 +16,10 @@ builder.Services.AddScoped<GatewayPagamentoService>();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+app.UseStaticFiles();
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -30,8 +37,4 @@ app.MapControllers();
 
 app.Run();
 
-public partial class Program //o metodo de teste agora tem acesso a classe Program,
-                             //pois o partial permite que a classe seja dividida em mais de um arquivo
-{
-
-}
+public partial class Program { }
