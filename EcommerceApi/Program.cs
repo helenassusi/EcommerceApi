@@ -29,3 +29,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program //o metodo de teste agora tem acesso a classe Program,
+                             //pois o partial permite que a classe seja dividida em mais de um arquivo
+{
+
+}

@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="EcommerceAPI.Tests/EcommerceAPI.Tests.csproj" Id="480f4572-1447-4874-9956-7943dc5ebe97" />
   <Project Path="EcommerceApi/EcommerceApi.csproj" />
 </Solution>
